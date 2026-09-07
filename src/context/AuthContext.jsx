@@ -43,7 +43,7 @@ export const AuthProvider = ({ children }) => {
 
         try {
             setIsLoading(true);
-            const response = await fetch("http://localhost:3000/api/auth/user", {
+            const response = await fetch("https://vercel-backend-blue-phi.vercel.app/api/auth/user", {
                 method: "GET",
                 headers: {
                     Authorization: `Bearer ${token}`,

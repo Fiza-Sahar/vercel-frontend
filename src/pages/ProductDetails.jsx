@@ -16,7 +16,7 @@ const ProductDetails = () => {
         const fetchProduct = async () => {
             try {
                 setLoading(true);
-                const res = await fetch(`http://localhost:3000/api/products/${id}`);
+                const res = await fetch(`https://vercel-backend-blue-phi.vercel.app/api/products/${id}`);
                 const data = await res.json();
 
                 if (res.ok && data.success) {

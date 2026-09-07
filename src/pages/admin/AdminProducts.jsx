@@ -24,7 +24,7 @@ const AdminProducts = () => {
     const fetchProducts = async () => {
         try {
             setLoading(true);
-            const res = await fetch("http://localhost:3000/api/products");
+            const res = await fetch("https://vercel-backend-blue-phi.vercel.app/api/products");
             const data = await res.json();
             if (res.ok && data.success) {
                 setProducts(data.products);
@@ -105,8 +105,8 @@ const AdminProducts = () => {
         }
 
         const url = editingProduct
-            ? `http://localhost:3000/api/products/${editingProduct._id}`
-            : "http://localhost:3000/api/products";
+            ? `https://vercel-backend-blue-phi.vercel.app/api/products/${editingProduct._id}`
+            : "https://vercel-backend-blue-phi.vercel.app/api/products";
 
         const method = editingProduct ? "PUT" : "POST";
 
@@ -143,7 +143,7 @@ const AdminProducts = () => {
         if (!window.confirm("Are you sure you want to delete this product?")) return;
 
         try {
-            const res = await fetch(`http://localhost:3000/api/products/${id}`, {
+            const res = await fetch(`https://vercel-backend-blue-phi.vercel.app/api/products/${id}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: authorizationToken,

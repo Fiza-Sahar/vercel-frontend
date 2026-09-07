@@ -26,7 +26,7 @@ const Dashboard = () => {
         setLoading(true);
 
         try {
-            const response = await fetch("http://localhost:3000/api/auth/profile", {
+            const response = await fetch("https://vercel-backend-blue-phi.vercel.app/api/auth/profile", {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

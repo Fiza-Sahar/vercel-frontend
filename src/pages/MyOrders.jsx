@@ -13,7 +13,7 @@ const MyOrders = () => {
         const fetchOrders = async () => {
             try {
                 setLoading(true);
-                const res = await fetch("http://localhost:3000/api/orders/my-orders", {
+                const res = await fetch("https://vercel-backend-blue-phi.vercel.app/api/orders/my-orders", {
                     method: "GET",
                     headers: {
                         Authorization: authorizationToken,

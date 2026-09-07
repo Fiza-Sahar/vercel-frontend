@@ -12,7 +12,7 @@ const AdminUsers = () => {
     const fetchUsers = async () => {
         try {
             setLoading(true);
-            const res = await fetch("http://localhost:3000/api/admin/users", {
+            const res = await fetch("https://vercel-backend-blue-phi.vercel.app/api/admin/users", {
                 headers: {
                     Authorization: authorizationToken,
                 },
@@ -40,7 +40,7 @@ const AdminUsers = () => {
         if (!window.confirm("Kya aap is user ko delete karna chahte hain?")) return;
 
         try {
-            const res = await fetch(`http://localhost:3000/api/admin/users/${userId}`, {
+            const res = await fetch(`https://vercel-backend-blue-phi.vercel.app/api/admin/users/${userId}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: authorizationToken,

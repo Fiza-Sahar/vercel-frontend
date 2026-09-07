@@ -18,7 +18,7 @@ const AdminDashboard = () => {
         const fetchStats = async () => {
             try {
                 setLoading(true);
-                const res = await fetch("http://localhost:3000/api/admin/stats", {
+                const res = await fetch("https://vercel-backend-blue-phi.vercel.app/api/admin/stats", {
                     method: "GET",
                     headers: {
                         Authorization: authorizationToken,

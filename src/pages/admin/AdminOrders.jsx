@@ -12,7 +12,7 @@ const AdminOrders = () => {
     const fetchAllOrders = async () => {
         try {
             setLoading(true);
-            const res = await fetch("http://localhost:3000/api/orders/admin/all", {
+            const res = await fetch("https://vercel-backend-blue-phi.vercel.app/api/orders/admin/all", {
                 headers: {
                     Authorization: authorizationToken,
                 },
@@ -41,7 +41,7 @@ const AdminOrders = () => {
         setError("");
 
         try {
-            const res = await fetch(`http://localhost:3000/api/orders/admin/${orderId}/status`, {
+            const res = await fetch(`https://vercel-backend-blue-phi.vercel.app/api/orders/admin/${orderId}/status`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",

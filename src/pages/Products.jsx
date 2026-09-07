@@ -17,7 +17,7 @@ const Products = () => {
     // 1. Fetch Categories list
     const fetchCategories = async () => {
         try {
-            const res = await fetch("http://localhost:3000/api/products/categories/list");
+            const res = await fetch("https://vercel-backend-blue-phi.vercel.app/api/products/categories/list");
             const data = await res.json();
             if (data.success && data.categories) {
                 setCategories(data.categories);
@@ -38,7 +38,7 @@ const Products = () => {
             if (selectedCategory && selectedCategory !== "All") params.append("category", selectedCategory);
             if (sortBy) params.append("sort", sortBy);
 
-            const res = await fetch(`http://localhost:3000/api/products?${params.toString()}`);
+            const res = await fetch(`https://vercel-backend-blue-phi.vercel.app/api/products?${params.toString()}`);
             const data = await res.json();
 
             if (res.ok && data.success) {

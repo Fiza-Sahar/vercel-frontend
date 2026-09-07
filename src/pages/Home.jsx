@@ -12,7 +12,7 @@ function Home() {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const res = await fetch("http://localhost:3000/api/products");
+                const res = await fetch("https://vercel-backend-blue-phi.vercel.app/api/products");
                 const data = await res.json();
                 if (res.ok && data.success) {
                     setProducts(data.products);
