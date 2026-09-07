@@ -1,0 +1,99 @@
+#error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 4rem 2rem;
+}
+
+#error-page .content {
+  max-width: 700px;
+  text-align: center;
+}
+
+#error-page .header {
+  font-size: 18rem;
+  line-height: 1;
+  margin: 0;
+  font-weight: 700;
+
+  background: linear-gradient(
+    90deg,
+    #71b7e6,
+    #646cff,
+    #b98acc,
+    #ee8176,
+    #b98acc,
+    #646cff,
+    #71b7e6
+  );
+
+  background-size: 400%;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: animate 10s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  25% {
+    background-position: 100% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  75% {
+    background-position: 0% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+#error-page h4 {
+  font-size: 2.8rem;
+  margin: 2rem 0;
+  text-transform: uppercase;
+}
+
+#error-page p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+#error-page .btns {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+#error-page .btns a {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+
+  border: 2px solid #646cff;
+  border-radius: 25px;
+
+  color: #646cff;
+
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  transition: all 0.3s ease;
+}
+
+#error-page .btns a:hover {
+  background-color: #646cff;
+  color: white;
+}
